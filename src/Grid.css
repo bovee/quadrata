@@ -1,0 +1,119 @@
+input {
+  border: none;
+}
+
+.grid-table {
+  max-width: min-content;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border: 3px solid black;
+}
+
+:root[data-mantine-color-scheme="dark"] table {
+  border: 3px solid white;
+}
+
+tbody td {
+  position: relative;
+  border-right: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  margin: 0px;
+  padding: 0px;
+}
+
+tbody td:nth-child(3n) {
+  border-right: 1px solid black;
+}
+
+:root[data-mantine-color-scheme="dark"] tbody td:nth-child(3n) {
+  border-right: 1px solid white;
+}
+
+tbody tr:nth-child(3n) td {
+  border-bottom: 1px solid black;
+}
+
+:root[data-mantine-color-scheme="dark"] tbody tr:nth-child(3n) td {
+  border-bottom: 1px solid white;
+}
+
+.guess-mode input {
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid darkgray;
+  caret-color: black;
+}
+
+.guess-mode input:focus {
+  outline: none;
+  border: 1px solid lightgray;
+  caret-color: transparent;
+}
+
+td.error input:focus {
+  border: 1px solid darkred;
+}
+
+td.error input {
+  border: 1px solid red;
+}
+
+.num-box {
+  background-color: transparent;
+  text-align: center;
+  font-size: 24px;
+  width: 30px;
+  height: 30px;
+}
+
+.highlight {
+  color: darkturquoise;
+}
+
+.num-box:invalid {
+  color: red;
+}
+
+.pencil {
+  pointer-events: none;
+  color: grey;
+  position: absolute;
+  text-align: center;
+  font-size: 9px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pencil > span {
+  width: 9px;
+  height: 10px;
+  justify-content: space-around;
+}
+
+.overlay {
+  position: absolute;
+  margin: 3px;
+  background-color: rgba(1,1,1,0);
+}
+
+tfoot td {
+  text-align: center;
+  font-size: 24px;
+  user-select: none;
+}
+
+@media print {
+  .controls, tfoot {
+    display: none;
+  }
+}
